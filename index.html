@@ -138,7 +138,6 @@
         }
         /* ========================================= */
 
-        /* Título movido mais para baixo (140px de padding) para sair do desfoque */
         header { max-width: 900px; margin: 0 auto; padding: 140px 20px 20px; text-align: left; position: relative; z-index: 85; transition: opacity 0.3s;}
         body.search-mode header { display: none !important; }
 
@@ -168,7 +167,6 @@
         .pulse-dot { width: 10px; height: 10px; background-color: var(--green); border-radius: 50%; display: inline-block; box-shadow: 0 0 8px var(--green); animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } }
 
-        /* Pílula do Samsung News ajustada, sem glow, apenas leve e elegante */
         .telegram-pill { 
             position: relative; 
             display: inline-flex; 
@@ -195,6 +193,7 @@
 
         .filter-wrapper { position: relative; margin-left: auto; }
         .filter-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; cursor: pointer; user-select: none; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; font-size: 0.85rem; font-weight: 600; color: var(--text-main); backdrop-filter: blur(10px); transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1); }
+        .filter-pill:all { outline: none; }
         .filter-pill:hover, .filter-pill.menu-open { background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.2); }
         .filter-pill svg { width: 16px; height: 16px; color: var(--text-muted); transition: transform 0.2s ease; }
         .filter-pill.menu-open svg { transform: rotate(180deg); }
@@ -346,7 +345,7 @@
             </div>
 
             <div class="status-badges">
-                <div class="badge">Atualizado: 26 de outubro</div>
+                <div class="badge">Atualizado: 28 de outubro</div>
                 <div class="badge badge-live"><span class="pulse-dot"></span> Ao vivo</div>
                 <a href="https://t.me/samsungapksnew" target="_blank" class="telegram-pill">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-1.442 4.195c.205.34.604.304.81.109l2.254-2.189 4.697 3.465c.865.478 1.487.23 1.704-.79l3.082-14.51c.32-1.298-.485-1.89-1.281-1.247z"/></svg>
@@ -410,7 +409,7 @@
             <div class="card-wrapper"><div class="card-glow"></div><div class="category"><h2>Linha A5x</h2>
                 <div class="device" data-status="atualizado"><div class="device-group"><span class="name">A57</span><span class="model-code"> (SM-A576B)</span><span class="date-pill available">Atualizado</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot green"></span></div></div>
                 <div class="device" data-status="atualizado"><div class="device-group"><span class="name">A56</span><span class="model-code"> (SM-A566B)</span><span class="date-pill available">Atualizado</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot green"></span></div></div>
-                <div class="device" data-status="distribuicao"><div class="device-group"><span class="name">A55</span><span class="model-code"> (SM-A556B)</span><span class="date-pill distributing">Em distribuição</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot yellow"></span></div></div>
+                <div class="device" data-status="atualizado"><div class="device-group"><span class="name">A55</span><span class="model-code"> (SM-A556B)</span><span class="date-pill available">Atualizado</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot green"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">A54</span><span class="model-code"> (SM-A546B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
             </div></div>
 
@@ -434,8 +433,8 @@
                 <div class="device" data-status="distribuicao"><div class="device-group"><span class="name">A17 LTE</span><span class="model-code"> (SM-A175F)</span><span class="date-pill distributing">Em distribuição</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot yellow"></span></div></div>
                 <div class="device" data-status="distribuicao"><div class="device-group"><span class="name">A16 5G</span><span class="model-code"> (SM-A166B)</span><span class="date-pill distributing">Em distribuição</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot yellow"></span></div></div>
                 <div class="device" data-status="distribuicao"><div class="device-group"><span class="name">A16 LTE</span><span class="model-code"> (SM-A165F)</span><span class="date-pill distributing">Em distribuição</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot yellow"></span></div></div>
-                <div class="device" data-status="testes"><div class="device-group"><span class="name">A15 5G</span><span class="model-code"> (SM-A156B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
-                <div class="device" data-status="testes"><div class="device-group"><span class="name">A15 LTE</span><span class="model-code"> (SM-A155F)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
+                <div class="device" data-status="distribuicao"><div class="device-group"><span class="name">A15 5G</span><span class="model-code"> (SM-A156B)</span><span class="date-pill distributing">Em distribuição</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot yellow"></span></div></div>
+                <div class="device" data-status="distribuicao"><div class="device-group"><span class="name">A15 LTE</span><span class="model-code"> (SM-A155F)</span><span class="date-pill distributing">Em distribuição</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot yellow"></span></div></div>
             </div></div>
 
             <div class="card-wrapper"><div class="card-glow"></div><div class="category"><h2>Linha A0x</h2>
@@ -445,7 +444,7 @@
             </div></div>
 
             <div class="card-wrapper"><div class="card-glow"></div><div class="category"><h2>Linha M5x</h2>
-                <div class="device" data-status="testes"><div class="device-group"><span class="name">M56</span><span class="model-code"> (SM-M566B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
+                <div class="device" data-status="atualizado"><div class="device-group"><span class="name">M56</span><span class="model-code"> (SM-M566B)</span><span class="date-pill available">Atualizado</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot green"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M55s</span><span class="model-code"> (SM-M558B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M55</span><span class="model-code"> (SM-M556B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M54</span><span class="model-code"> (SM-M546B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
@@ -456,13 +455,13 @@
             </div></div>
 
             <div class="card-wrapper"><div class="card-glow"></div><div class="category"><h2>Linha M3x</h2>
-                <div class="device" data-status="testes"><div class="device-group"><span class="name">M36</span><span class="model-code"> (SM-M366B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
+                <div class="device" data-status="atualizado"><div class="device-group"><span class="name">M36</span><span class="model-code"> (SM-M366B)</span><span class="date-pill available">Atualizado</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot green"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M35</span><span class="model-code"> (SM-M356B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M34</span><span class="model-code"> (SM-M346B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
             </div></div>
 
             <div class="card-wrapper"><div class="card-glow"></div><div class="category"><h2>Linha M1x</h2>
-                <div class="device" data-status="testes"><div class="device-group"><span class="name">M17</span><span class="model-code"> (SM-M176B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
+                <div class="device" data-status="atualizado"><div class="device-group"><span class="name">M17</span><span class="model-code"> (SM-M176B)</span><span class="date-pill available">Atualizado</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot green"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M17e</span><span class="model-code"> (SM-M175F)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M16</span><span class="model-code"> (SM-M166B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
                 <div class="device" data-status="testes"><div class="device-group"><span class="name">M15</span><span class="model-code"> (SM-M156B)</span><span class="date-pill testing">Em testes</span></div><div class="device-actions"><button class="fav-btn" title="Favoritar"><i data-lucide="heart"></i></button><span class="dot purple"></span></div></div>
